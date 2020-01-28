@@ -1,0 +1,82 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o system_enter.o read_write.o info_print.o add.o del_byname.o del_bystunum.o del_byphonum.o del_system.o system_minster.o system_member.o all_print.o search.o system_info.o change_info.o change_psw.o memberinfo_change.o dep_change.o inptst.o
+LINKOBJ  = main.o system_enter.o read_write.o info_print.o add.o del_byname.o del_bystunum.o del_byphonum.o del_system.o system_minster.o system_member.o all_print.o search.o system_info.o change_info.o change_psw.o memberinfo_change.o dep_change.o inptst.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = IMA项目.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+system_enter.o: system_enter.c
+	$(CC) -c system_enter.c -o system_enter.o $(CFLAGS)
+
+read_write.o: read_write.c
+	$(CC) -c read_write.c -o read_write.o $(CFLAGS)
+
+info_print.o: info_print.c
+	$(CC) -c info_print.c -o info_print.o $(CFLAGS)
+
+add.o: add.c
+	$(CC) -c add.c -o add.o $(CFLAGS)
+
+del_byname.o: del_byname.c
+	$(CC) -c del_byname.c -o del_byname.o $(CFLAGS)
+
+del_bystunum.o: del_bystunum.c
+	$(CC) -c del_bystunum.c -o del_bystunum.o $(CFLAGS)
+
+del_byphonum.o: del_byphonum.c
+	$(CC) -c del_byphonum.c -o del_byphonum.o $(CFLAGS)
+
+del_system.o: del_system.c
+	$(CC) -c del_system.c -o del_system.o $(CFLAGS)
+
+system_minster.o: system_minster.c
+	$(CC) -c system_minster.c -o system_minster.o $(CFLAGS)
+
+system_member.o: system_member.c
+	$(CC) -c system_member.c -o system_member.o $(CFLAGS)
+
+all_print.o: all_print.c
+	$(CC) -c all_print.c -o all_print.o $(CFLAGS)
+
+search.o: search.c
+	$(CC) -c search.c -o search.o $(CFLAGS)
+
+system_info.o: system_info.c
+	$(CC) -c system_info.c -o system_info.o $(CFLAGS)
+
+change_info.o: change_info.c
+	$(CC) -c change_info.c -o change_info.o $(CFLAGS)
+
+change_psw.o: change_psw.c
+	$(CC) -c change_psw.c -o change_psw.o $(CFLAGS)
+
+memberinfo_change.o: memberinfo_change.c
+	$(CC) -c memberinfo_change.c -o memberinfo_change.o $(CFLAGS)
+
+dep_change.o: dep_change.c
+	$(CC) -c dep_change.c -o dep_change.o $(CFLAGS)
+
+inptst.o: inptst.c
+	$(CC) -c inptst.c -o inptst.o $(CFLAGS)
